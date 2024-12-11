@@ -73,6 +73,7 @@ def user_manager(request):
 
         serializer = ItemSerializer(data=new_user)
         if serializer.is_valid():
+            print('Make User')
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
     
