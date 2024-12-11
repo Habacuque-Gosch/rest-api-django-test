@@ -9,7 +9,7 @@ import json
 
 
 @api_view(['GET'])
-def get_users(request):
+def get_all_users(request):
 
     if request.method == 'GET':
 
