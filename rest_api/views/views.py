@@ -20,9 +20,9 @@ def get_items(request):
             return Response(serializer.data)
 
         except:
-            return Response(status=status.HTTP_404_NOT_FOUND)
+            return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    return Response(status=status.HTTP_404_NOT_FOUND)
+    return Response(status=status.HTTP_404)
 
 
 @api_view(['POST'])
