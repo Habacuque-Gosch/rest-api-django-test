@@ -42,7 +42,6 @@ def get_by_name(request, name):
 def user_manager(request):
 
     # GET DATA USER
-    
     if request.method == 'GET':
 
         try:
@@ -66,7 +65,6 @@ def user_manager(request):
             return Response(status=status.HTTP_400_BAD_REQUEST)
         
     # MAKE DATA USER
-
     if request.method == 'POST':
 
         new_user = request.data
@@ -78,3 +76,11 @@ def user_manager(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
     
         return Response(status=status.HTTP_400_BAD_REQUEST)  
+
+    # EDITING USER
+    if request.method == 'PUT':
+        pass
+
+    # DELETING USER
+    if request.method == 'DELETE':
+        pass
