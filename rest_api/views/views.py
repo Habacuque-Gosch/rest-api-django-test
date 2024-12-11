@@ -63,16 +63,14 @@ def user_manager(request):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    # if request.method == 'POST':
+    if request.method == 'POST':
 
-    #     try:
-    #         serializer = ItemSerializer(data=request.data)
-    #         if serializer.is_valid():
-    #             serializer.save()
-            
-    #         return Response(serializer.data)
+        new_user = request.data
+
+        serializer = ItemSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
         
-    #     except:
-    #         return Response(status=status.HTTP_404_NOT_FOUND)  
+        return Response(serializer.data)
     
-    # return Response(status=status.HTTP_404_NOT_FOUND)
+        return Response(status=status.HTTP_404_NOT_FOUND)  
