@@ -19,7 +19,6 @@ def get_items(request):
 def add_item(request):
 
     serializer = ItemSerializer(data=request.data)
-
     if serializer.is_valid():
         serializer.save()
     
