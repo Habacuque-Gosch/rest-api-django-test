@@ -1,5 +1,5 @@
 from django.contrib import admin
-from base.models import Item
+from rest_api.models import Item
 
 class ListItems(admin.ModelAdmin):
     list_display = ("id", "name")
