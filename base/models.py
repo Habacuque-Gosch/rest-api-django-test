@@ -8,4 +8,4 @@ class Item(models.Model):
     created = models.DateTimeField(auto_created=True)
 
     def __str__(self):
-        self.name
+        return self.name
