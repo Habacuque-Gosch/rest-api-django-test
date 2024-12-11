@@ -9,7 +9,7 @@ import json
 
 
 @api_view(['GET'])
-def get_items(request):
+def get_users(request):
 
     if request.method == 'GET':
 
@@ -26,7 +26,7 @@ def get_items(request):
 
 
 @api_view(['POST'])
-def add_item(request):
+def add_user(request):
 
     if request.method == 'POST':
 
@@ -41,3 +41,7 @@ def add_item(request):
             return Response(status=status.HTTP_404_NOT_FOUND)  
     
     return Response(status=status.HTTP_404_NOT_FOUND)
+
+@api_view(['GET'])
+def get_by_name(request):
+    user = Item.objects.get(name=request.name)
