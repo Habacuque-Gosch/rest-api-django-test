@@ -11,7 +11,9 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1',
+                'rest-api-users-y18n.onrender.com',
+                ]
 
 
 INSTALLED_APPS = [
@@ -93,8 +95,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ORIGINS_ALLOW_aLL = True
+# CORS_ORIGINS_ALLOW_aLL = True
 
-# CORS_ALLOW_ORIGINS = [
-#     'http://127.0.0.1:8000'
-# ]
+CORS_ALLOW_ORIGINS = [
+    'http://127.0.0.1:8000',
+    'https://rest-api-users-y18n.onrender.com',
+]
