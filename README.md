@@ -6,7 +6,7 @@
 
 ## Descrição do projeto
 
- <p align="justify">O sistema foi desenvolvido para a agência GetHero que é reconhecida como líder de mercado, dedicada a conectar talentos às necessidades únicas de cada solicitação. No mercado de trabalho desde de 2015.</p>
+ <p align="justify"></p>
  
 ## Features
 
