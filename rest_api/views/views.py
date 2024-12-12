@@ -93,4 +93,11 @@ def user_manager(request):
 
     # DELETING USER
     if request.method == 'DELETE':
-        pass
+        
+        try:
+            user_to_delete = Item.objects.get(name=request.data['name'])
+            user_to_delete.delete()
+            return Response(status=status.HTTP_202_ACCEPTED)
+
+        except:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
