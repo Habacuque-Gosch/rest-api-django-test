@@ -79,7 +79,17 @@ def user_manager(request):
 
     # EDITING USER
     if request.method == 'PUT':
-        pass
+
+        user = request.data['name']
+        update_user = Item.objects.get(name=user)
+
+        serializer = ItemSerializer(update_user, data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
+        
+        return Response(status=status.HTTP_400_BAD_REQUEST)
 
     # DELETING USER
     if request.method == 'DELETE':
