@@ -4,7 +4,7 @@ from rest_framework import status
 from rest_api.models import Item
 from rest_api.serializers import ItemSerializer
 # from django.contrib.auth import login
-import json
+# import json
 
 
 
